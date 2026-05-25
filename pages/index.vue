@@ -148,23 +148,7 @@
         </p>
       </div>
 
-      <!-- Search and Filter Bar -->
-      <div class="max-w-md mx-auto relative glass-panel rounded-xl border border-gold/15 overflow-hidden shadow-lg">
-        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-          <svg class="h-4 w-4 text-gold/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
-        <input v-model="eventSearchQuery" type="text" :placeholder="copy.scheduleSearchPlaceholder"
-          class="block w-full pl-10 pr-4 py-3 bg-primary-dark/30 text-slate-100 placeholder-slate-400 focus:ring-1 focus:ring-gold focus:outline-none text-xs sm:text-sm transition-all" />
-        <button v-if="eventSearchQuery" @click="eventSearchQuery = ''"
-          class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-gold">
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+
 
       <!-- Single Day Theme Panel -->
       <div
@@ -188,7 +172,7 @@
           class="absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/10 via-gold/30 to-gold/10">
         </div>
 
-        <div v-if="filteredEvents.length > 0" class="space-y-8 relative animate-fade-in">
+        <div class="space-y-8 relative animate-fade-in">
           <!-- Event Milestone Rows -->
           <div v-for="(event, idx) in filteredEvents" :key="idx"
             class="relative pl-14 md:pl-20 transition-all duration-300 transform">
@@ -306,25 +290,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Empty search results state -->
-        <div v-else
-          class="text-center py-16 glass-panel border border-gold/15 max-w-md mx-auto rounded-2xl space-y-4 shadow-lg">
-          <div
-            class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto border border-gold/20 text-gold animate-pulse">
-            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <p class="text-slate-300 text-sm max-w-xs mx-auto leading-relaxed">
-            {{ copy.scheduleSearchEmpty }} <span class="text-gold">"{{ eventSearchQuery }}"</span>.
-          </p>
-          <button @click="eventSearchQuery = ''"
-            class="px-5 py-2 bg-gold/10 hover:bg-gold/20 text-gold font-semibold rounded-lg border border-gold/25 text-xs transition-colors">
-            {{ copy.scheduleSearchEmptyBtn }}
-          </button>
         </div>
       </div>
 

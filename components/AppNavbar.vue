@@ -2,19 +2,8 @@
   <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-panel bg-primary-dark/80 backdrop-blur-md border-b border-gold/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Logo and Brand -->
-        <NuxtLink to="/" class="flex items-center space-x-3 group shrink-0">
-          <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gold-light via-gold to-gold-dark rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-105 border border-primary shrink-0">
-            <span class="font-serif font-black text-primary-dark text-sm md:text-lg">মিলন</span>
-          </div>
-          <div class="max-w-[200px] sm:max-w-md">
-            <span class="font-serif font-bold text-xs sm:text-sm md:text-base tracking-wide text-gold group-hover:text-gold-light transition-colors block leading-tight truncate">
-              ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়
-            </span>
-            <span class="text-[9px] sm:text-[10px] text-slate-300 tracking-widest block uppercase font-medium mt-0.5">
-              স্থাপিত ১৯৭৫ • পূর্ণ মিলন অনুষ্ঠান
-            </span>
-          </div>
+        <NuxtLink to="/" class="flex items-center group shrink-0">
+          <AppLogo class="h-7 md:h-8 w-auto group-hover:scale-105 transition-transform duration-300 shrink-0" />
         </NuxtLink>
 
         <!-- Desktop Menu & Controls -->
@@ -105,8 +94,7 @@ const isMobileMenuOpen = ref(false)
 
 const navLinks = [
   { name: 'হোম', path: '/' },
-  { name: 'গ্যালারি', path: '/gallery' },
-  { name: 'যোগাযোগ', path: '/contact' }
+  { name: 'গ্যালারি', path: '/gallery' }
 ]
 
 const toggleMobileMenu = () => {

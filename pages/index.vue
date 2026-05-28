@@ -45,7 +45,7 @@
             class="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold-light via-gold to-gold-dark hover:from-gold hover:to-gold-dark text-primary-dark font-serif font-black tracking-wide rounded-lg shadow-lg hover:shadow-gold/25 transform hover:-translate-y-0.5 transition-all text-center">
             {{ copy.heroCtaHistory }}
           </NuxtLink>
-          <NuxtLink to="/contact"
+          <NuxtLink to="#schedule"
             class="w-full sm:w-auto px-8 py-3.5 border-2 border-gold/35 text-gold hover:text-primary-dark hover:bg-gold hover:border-gold font-serif font-bold tracking-wide rounded-lg transform hover:-translate-y-0.5 transition-all backdrop-blur-sm text-center">
             {{ copy.heroCtaContact }}
           </NuxtLink>
@@ -328,7 +328,7 @@
         <!-- Ticket dotted divider on desktop -->
         <div class="hidden md:block h-16 w-0 border-r-2 border-dashed border-gold/25 mx-2"></div>
 
-        <NuxtLink to="/contact"
+        <NuxtLink to="#footer"
           class="shrink-0 px-7 py-3.5 bg-gradient-to-r from-gold-light via-gold to-gold-dark hover:from-gold hover:to-gold-dark text-primary-dark font-black text-sm rounded-lg shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 z-10 hover:shadow-gold/15">
           {{ copy.scheduleCtaBtn }}
         </NuxtLink>
@@ -398,7 +398,51 @@
       </div>
     </section> -->
 
-    <!-- ACHIEVEMENTS SECTION (সাফল্যসমূহ) -->
+  
+
+    <!-- HISTORIC JOURNEY SECTION (ইতিহাস) -->
+    <section id="history" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 scroll-mt-24">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+
+        <div class="mb-6">
+          <span
+            class="text-xs font-bold tracking-widest text-gold uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-full">
+            {{ copy.historySectionBadge }}
+          </span>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-serif font-black text-white tracking-wide leading-tight">
+          {{ copy.historySectionTitlePrefix }}
+          <span class="bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">
+            {{ copy.historySectionTitleSuffix }}
+          </span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-gold-light via-gold to-gold-dark mx-auto my-6"></div>
+        <p class="text-slate-300 text-sm md:text-base leading-relaxed font-light">
+          {{ copy.historySectionDesc }}
+        </p>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative w-full py-10">
+        <!-- Central Line Track (Desktop Only) -->
+        <div
+          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/10 via-gold/45 to-gold/10 transform -translate-x-1/2 hidden md:block">
+        </div>
+
+        <!-- Mobile Line Track -->
+        <div
+          class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/10 via-gold/45 to-gold/10 transform -translate-x-1/2 md:hidden">
+        </div>
+
+        <!-- Loop through timeline milestones -->
+        <div class="space-y-4 relative">
+          <TimelineItem v-for="(milestone, idx) in historyData" :key="milestone.year" :milestone="milestone"
+            :index="idx" />
+        </div>
+      </div>
+    </section>
+
+      <!-- ACHIEVEMENTS SECTION (সাফল্যসমূহ) -->
     <section id="achievements" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 scroll-mt-24">
       <div class="text-center max-w-3xl mx-auto space-y-4">
         <div class="mb-6">
@@ -478,7 +522,7 @@
       </div>
 
       <!-- CTA to gallery -->
-      <div class="text-center pt-4">
+      <!-- <div class="text-center pt-4">
         <p class="text-slate-400 text-sm mb-4">
           {{ copy.achievementsCtaText }}
         </p>
@@ -490,73 +534,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </NuxtLink>
-      </div>
+      </div> -->
     </section>
-
-    <!-- HISTORIC JOURNEY SECTION (ইতিহাস) -->
-    <section id="history" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 scroll-mt-24">
-      <div class="text-center max-w-3xl mx-auto space-y-4">
-
-        <div class="mb-6">
-          <span
-            class="text-xs font-bold tracking-widest text-gold uppercase px-3 py-1 bg-gold/10 border border-gold/20 rounded-full">
-            {{ copy.historySectionBadge }}
-          </span>
-        </div>
-        <h2 class="text-3xl md:text-5xl font-serif font-black text-white tracking-wide leading-tight">
-          {{ copy.historySectionTitlePrefix }}
-          <span class="bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">
-            {{ copy.historySectionTitleSuffix }}
-          </span>
-        </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-gold-light via-gold to-gold-dark mx-auto my-6"></div>
-        <p class="text-slate-300 text-sm md:text-base leading-relaxed font-light">
-          {{ copy.historySectionDesc }}
-        </p>
-      </div>
-
-      <!-- Timeline Container -->
-      <div class="relative w-full py-10">
-        <!-- Central Line Track (Desktop Only) -->
-        <div
-          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/10 via-gold/45 to-gold/10 transform -translate-x-1/2 hidden md:block">
-        </div>
-
-        <!-- Mobile Line Track -->
-        <div
-          class="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold/10 via-gold/45 to-gold/10 transform -translate-x-1/2 md:hidden">
-        </div>
-
-        <!-- Loop through timeline milestones -->
-        <div class="space-y-4 relative">
-          <TimelineItem v-for="(milestone, idx) in historyData" :key="milestone.year" :milestone="milestone"
-            :index="idx" />
-        </div>
-      </div>
-
-      <!-- Bottom Golden Banner Callout -->
-      <div class="text-center pt-4">
-        <div
-          class="inline-flex flex-col items-center glass-panel p-8 rounded-2xl border border-gold/15 max-w-2xl mx-auto space-y-4 shadow-lg">
-          <h3 class="font-serif font-bold text-xl text-gold-light">
-            {{ copy.historyCalloutTitle }}
-          </h3>
-          <p class="text-sm text-slate-300 max-w-md leading-relaxed">
-            {{ copy.historyCalloutDesc }}
-          </p>
-          <NuxtLink to="/contact"
-            class="px-6 py-2.5 bg-gradient-to-r from-gold-light via-gold to-gold-dark hover:from-gold hover:to-gold-dark text-primary-dark font-semibold rounded-lg shadow-md transition-all duration-300 transform hover:scale-[1.02]">
-            {{ copy.historyCalloutLink }}
-          </NuxtLink>
-        </div>
-      </div>
-    </section>
-
-  
-
-  
-
-
   </div>
 </template>
 
@@ -616,7 +595,7 @@ const copy = {
   heroTitleLine3Highlight: 'পূর্ণ মিলন অনুষ্ঠান।',
   heroDescription: 'ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়ে আপনাকে স্বাগত। ১৯৭৫ সাল থেকে আমরা প্রাতিষ্ঠানিক নেতৃত্ব, উদ্ভাবনী চিন্তা এবং নৈতিক সততা বিকাশের মাধ্যমে শিক্ষার্থীদের একটি সুন্দর পৃথিবী গড়ে তুলতে সক্ষম করে তুলছি।',
   heroCtaHistory: 'আমাদের ইতিহাস জানুন',
-  heroCtaContact: 'ভর্তি ও যোগাযোগ',
+  heroCtaContact: 'অনুষ্ঠান সময়সূচী',
   sealText: 'ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয় • পূর্ণ মিলন অনুষ্ঠান • স্থাপিত ১৯৭৫ •',
   ribbonText: '🏆 পূর্ণ মিলন অনুষ্ঠান',
   principalName: 'নুর মোহাম্মদ বিএসসি',
@@ -634,9 +613,9 @@ const copy = {
   achievementsCtaText: 'আমাদের ক্রীড়াবিদ ও পুরস্কার বিতরণীর সরাসরি চিত্র দেখতে চান?',
   achievementsCtaLinkText: 'চ্যাম্পিয়নশিপ গ্যালারি আর্কাইভ দেখুন',
   historySectionBadge: 'আমাদের সোনালী যাত্রা',
-  historySectionTitlePrefix: 'শিক্ষার গৌরবের ',
-  historySectionTitleSuffix: 'পূর্ণ মিলন অনুষ্ঠান',
-  historySectionDesc: '২২ মে, ১৯৭৫ সালে মাত্র ১৫ জন শিক্ষার্থী নিয়ে আমাদের পথচলা শুরু হয়েছিল। আজ আমরা একটি ঐতিহ্যবাহী ও দেশসেরা বিদ্যাপীঠে পরিণত হয়েছি। ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়ের দীর্ঘ গৌরবময় যাত্রা ও অবিস্মরণীয় মাইলফলকগুলো এখানে স্মরণ করা হয়েছে।',
+  historySectionTitlePrefix: 'বিদ্যালয় প্রতিষ্ঠার ',
+  historySectionTitleSuffix: 'গৌরবময় ইতিহাস',
+  historySectionDesc: '১ জানুয়ারি, ১৯৭৩ সালে বালিকা বিদ্যালয় হিসেবে আমাদের পথচলা শুরু হয়েছিল এবং পরবর্তীতে সহশিক্ষা কার্যক্রম চালুর মাধ্যমে এটি একটি পূর্ণাঙ্গ বিদ্যাপীঠে পরিণত হয়। বিদ্যালয় প্রতিষ্ঠার ইতিহাস, জমিদান ও এলাকার মানুষের অতুলনীয় অবদানের গৌরবময় ইতিহাস নিচে তুলে ধরা হলো।',
   historyCalloutTitle: 'আমাদের ভবিষ্যতের অংশ হোন',
   historyCalloutDesc: 'আমরা আমাদের পূর্ণ মিলন অনুষ্ঠান উদ্‌যাপন করার পাশাপাশি আগামী দিনের জন্য অসাধারণ মেধা তৈরি এবং পরবর্তী প্রজন্মকে গড়ে তুলতে উন্মুখ।',
   historyCalloutLink: 'আমাদের সাথে যুক্ত হন',
@@ -727,7 +706,7 @@ const portalCards = [
   },
 
   {
-    path: '/contact',
+    path: '#footer',
     icon: '📍',
     title: 'ঠিকানা ও সহায়তা',
     description: 'ভর্তি প্রক্রিয়া, ঐতিহাসিক তথ্য, যাতায়াতের রুট এবং যোগাযোগের বিষয়ে সরাসরি সহায়তা ও তথ্য পান।',

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-primary-dark/95 border-t border-gold/15 text-slate-300 py-12 relative overflow-hidden">
+  <footer id="footer" class="bg-primary-dark/95 border-t border-gold/15 text-slate-300 py-12 relative overflow-hidden">
     <!-- Subtle Golden Background Accent -->
     <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-gold/5 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-light/10 rounded-full blur-3xl pointer-events-none">
@@ -9,19 +9,8 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Brand / About Column -->
         <div class="space-y-4 col-span-1 md:col-span-2">
-          <div class="flex items-center space-x-3">
-            <div
-              class="w-10 h-10 bg-gradient-to-br from-gold-light via-gold to-gold-dark rounded-full flex items-center justify-center border border-primary shadow-inner">
-              <span class="font-serif font-black text-primary-dark text-sm">মিলন</span>
-            </div>
-            <div>
-              <span class="font-serif font-bold text-sm sm:text-base text-gold tracking-wide block leading-tight">
-                ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়
-              </span>
-              <span class="text-[10px] tracking-widest text-slate-400 uppercase font-medium">
-                স্থাপিত ১৯৭৫ • পূর্ণ মিলন অনুষ্ঠান
-              </span>
-            </div>
+          <div class="flex items-center">
+            <AppLogo class="h-8 w-auto shrink-0" />
           </div>
           <p class="text-sm text-slate-400 max-w-sm">
             প্রতিষ্ঠার পর থেকে, ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয় শিক্ষার্থীদের রূপান্তরমূলক শিক্ষা নিশ্চিত করতে এবং
@@ -29,21 +18,21 @@
           </p>
           <div class="flex space-x-3 pt-2">
             <!-- Social Icons (Mocked with gorgeous gold circles) -->
-            <a href="#"
+            <a href="https://www.facebook.com/groups/202534817595521" target="_blank"
               class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-slate-400 hover:text-primary-dark hover:bg-gold hover:border-gold transition-all duration-300">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
               </svg>
             </a>
-            <a href="#"
+            <a href="https://www.facebook.com/groups/202534817595521" target="_blank"
               class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-slate-400 hover:text-primary-dark hover:bg-gold hover:border-gold transition-all duration-300">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
               </svg>
             </a>
-            <a href="#"
+            <a href="https://www.facebook.com/groups/202534817595521" target="_blank"
               class="w-8 h-8 rounded-full border border-gold/20 flex items-center justify-center text-slate-400 hover:text-primary-dark hover:bg-gold hover:border-gold transition-all duration-300">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -60,9 +49,6 @@
           </h3>
           <ul class="space-y-2 text-sm">
             <li>
-              <NuxtLink to="/" class="hover:text-gold transition-colors">হোম বেস</NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/#history" class="hover:text-gold transition-colors">পূর্ণ মিলন অনুষ্ঠান</NuxtLink>
             </li>
             <li>
@@ -72,10 +58,7 @@
               <NuxtLink to="/gallery" class="hover:text-gold transition-colors">ক্যাম্পাস গ্যালারি</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/#notices" class="hover:text-gold transition-colors">নোটিশ বোর্ড</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/contact" class="hover:text-gold transition-colors">যোগাযোগ করুন</NuxtLink>
+              <NuxtLink to="/#schedule" class="hover:text-gold transition-colors">অনুষ্ঠান সময়সূচী</NuxtLink>
             </li>
           </ul>
         </div>
@@ -103,14 +86,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>{{ translateNumerals('+880 1712-345678') }}</span>
+              <span>{{ translateNumerals('+880 01317745536') }}</span>
             </li>
             <li class="flex items-center space-x-2">
               <svg class="w-5 h-5 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>info@crhhs.edu.bd</span>
+              <span>akramsheikh1112@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -120,12 +103,13 @@
       <div
         class="border-t border-gold/10 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400">
         <p>
-          © ২০২৬ ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত। গৌরবময় পূর্ণ মিলন অনুষ্ঠান উদযাপনে (১৯৭৫ - ২০২৫)।
+          © ২০২৬ ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত। গৌরবময় পূর্ণ মিলন অনুষ্ঠান উদযাপন।
         </p>
-        <p class="mt-2 md:mt-0 flex items-center">
-          আমাদের পূর্ণ মিলন অনুষ্ঠানের জন্য
-          <span class="text-gold mx-1">❤</span>
-          দিয়ে ডিজাইন করা।
+        <p class="mt-2 md:mt-0 text-slate-400">
+          আমাদের পূর্ণ মিলন অনুষ্ঠানের জন্য ডিজাইন ও ডেভেলপ করেছেন
+          <a href="https://www.facebook.com/md.akram.shekh.146" target="_blank" class="text-gold hover:underline transition-all font-medium mx-1">আকরাম</a>
+          এবং
+          <a href="https://www.facebook.com/rabbilifestyle" target="_blank" class="text-gold hover:underline transition-all font-medium mx-1">রাব্বি</a>।
         </p>
       </div>
     </div>

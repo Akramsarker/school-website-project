@@ -102,11 +102,11 @@
       <!-- Divider -->
       <div
         class="border-t border-gold/10 mt-8 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400">
-        <p>
+        <p class="text-center md:text-left">
           © ২০২৬ ছাতীয়ানী রোকেয়া ওবেদুল হক উচ্চ বিদ্যালয়। সর্বস্বত্ব সংরক্ষিত। গৌরবময় পূর্ণ মিলন অনুষ্ঠান উদযাপন।
         </p>
-        <p class="mt-2 md:mt-0 text-slate-400">
-          আমাদের পূর্ণ মিলন অনুষ্ঠানের জন্য ডিজাইন ও ডেভেলপ করেছেন
+        <p class="mt-2 md:mt-0 text-slate-400 text-center md:text-right">
+          ডিজাইন ও ডেভেলপ করেছেন
           <a href="https://www.facebook.com/md.akram.shekh.146" target="_blank" class="text-gold hover:underline transition-all font-medium mx-1">আকরাম</a>
           এবং
           <a href="https://www.facebook.com/rabbilifestyle" target="_blank" class="text-gold hover:underline transition-all font-medium mx-1">রাব্বি</a>।

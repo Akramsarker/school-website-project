@@ -2,7 +2,7 @@
   <div class="space-y-24 pb-24 relative overflow-hidden">
     <!-- Hero Section -->
     <section 
-      class="relative w-full min-h-[550px] md:min-h-[650px] flex items-center justify-center bg-cover bg-center overflow-hidden border-b border-gold/15"
+      class="relative w-full min-h-[480px] md:min-h-[650px] flex items-center justify-center bg-cover bg-[30%_center] sm:bg-center overflow-hidden border-b border-gold/15"
       style="background-image: url('/images/hero/hero-image.jpeg');"
     >
       <!-- Overlay for readability and premium look -->
@@ -13,7 +13,7 @@
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none z-0"></div>
 
       <!-- Hero Content -->
-      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col items-center text-center space-y-8">
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24 flex flex-col items-center text-center space-y-6 md:space-y-8">
         <div
           class="inline-flex items-center space-x-2 bg-gold/15 backdrop-blur-md border border-gold/30 px-4 py-1.5 rounded-full text-gold text-xs tracking-wider uppercase font-semibold animate-pulse"
         >

@@ -5,7 +5,7 @@
 ## উদাহরণ ফাইল নাম
 
 ```
-history-1975.jpg
+history-1973.jpg
 history-1985.jpg
 history-1995.jpg
 history-2005.jpg

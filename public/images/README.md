@@ -9,7 +9,7 @@
 | `hero/` | হিরো (উপরের ব্যানার) | `hero-banner.jpg` |
 | `principal/` | প্রধান শিক্ষকের বাণী | `principal.jpg` ✅ |
 | `achievements/` | সাফল্য ও সম্মান | `award-1.jpg`, `sports-trophy.jpg` |
-| `history/` | ইতিহাস টাইমলাইন | `history-1975.jpg`, `history-2025.jpg` |
+| `history/` | ইতিহাস টাইমলাইন | `history-1973.jpg`, `history-2025.jpg` |
 | `alumni/` | বিশিষ্ট প্রাক্তন শিক্ষার্থী | `alumni-1.jpg`, `alumni-2.jpg` |
 | `schedule/` | অনুষ্ঠান সময়সূচী | `event-rally.jpg`, `event-cultural.jpg` |
 | `notices/` | নোটিশ বোর্ড | `notice-jubilee.jpg` |

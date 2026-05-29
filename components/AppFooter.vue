@@ -55,9 +55,6 @@
               <NuxtLink to="/#alumni" class="hover:text-gold transition-colors">বিশিষ্ট প্রাক্তন শিক্ষার্থী</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/gallery" class="hover:text-gold transition-colors">ক্যাম্পাস গ্যালারি</NuxtLink>
-            </li>
-            <li>
               <NuxtLink to="/#schedule" class="hover:text-gold transition-colors">অনুষ্ঠান সময়সূচী</NuxtLink>
             </li>
           </ul>

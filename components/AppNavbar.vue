@@ -93,8 +93,7 @@ import { ref } from 'vue'
 const isMobileMenuOpen = ref(false)
 
 const navLinks = [
-  { name: 'হোম', path: '/' },
-  { name: 'গ্যালারি', path: '/gallery' }
+  { name: 'হোম', path: '/' }
 ]
 
 const toggleMobileMenu = () => {
